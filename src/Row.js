@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Row.css";
 import requests from "./Requests";
 import axios from "./axios";
+import IronManImage from "./ironman.jpg";
 
 function Row({ title, fetchUrl, isLargeRow = false }) {
   const [movies, setMovies] = useState([]);
@@ -31,7 +32,7 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
                 src={`${base_url}${
                   isLargeRow ? movie.poster_path : movie.backdrop_path
                 }`}
-                //src="https://venturebeat.com/wp-content/uploads/2018/09/ironman.jpg?fit=1920%2C1376&strip=all"
+                //src={IronManImage}
                 alt={movie.name}
               />
             )
